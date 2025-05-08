@@ -2,6 +2,7 @@
 
 module Puppet
   module Util
+    # main lookup function for DSL
     module TroclaHelper
       def trocla(trocla_func, has_options, *args)
         # Functions called from puppet manifests that look like this:

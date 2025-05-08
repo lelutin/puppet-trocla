@@ -111,7 +111,7 @@ Puppet::Functions.create_function(:trocla_lookup_key) do
     end
     unless options.include?('trocla_hierarchy') && !options['trocla_hierarchy'].empty?
       raise ArgumentError,
-            "'trocla_lookup_key': :trocla_hierarchy must be declared in trocla hierarchy of hiera.yaml when using this lookup_key function"
+            "'trocla_lookup_key': :trocla_hierarchy must be declared in trocla hierarchy of hiera.yaml when using this lookup_key function"  # rubocop:disable Layout/LineLength
     end
     @trocla = Trocla.new(options['config'])
   end

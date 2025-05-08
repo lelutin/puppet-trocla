@@ -2,6 +2,7 @@
 
 module Puppet
   module Parser
+    # main lookup function for puppet DSL
     module Functions
       newfunction(:trocla, type: :rvalue, doc: "
 This will create or get a random password from the trocla storage.

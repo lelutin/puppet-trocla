@@ -2,6 +2,7 @@
 
 module Puppet
   module Parser
+    # set and return password
     module Functions
       newfunction(:trocla_set, type: :rvalue, doc: "
   This will set a password/hash in the local storage and return itself,
