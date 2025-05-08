@@ -2,6 +2,7 @@
 
 module Puppet
   module Parser
+    # internal implementation of main lookup function for DSL
     module Functions
       newfunction(:trocla_get, type: :rvalue, doc: "
   This will only get an already stored password from the trocla storage.
