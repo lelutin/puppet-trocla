@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-if ENV.key?('PUPPET_VERSION')
-  puppetversion = "~> #{ENV['PUPPET_VERSION']}"
-else
-  puppetversion = ['>= 7.1.0']
-end
+puppetversion = if ENV.key?('PUPPET_VERSION')
+                  "~> #{ENV['PUPPET_VERSION']}"
+                else
+                  ['>= 7.1.0']
+                end
 
-gem 'rake'
 gem 'puppet', puppetversion
+gem 'rake'
 gem 'trocla'
 
 group :tests do
