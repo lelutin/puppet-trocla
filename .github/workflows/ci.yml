@@ -20,6 +20,8 @@ jobs:
           bundler-cache: true
       - name: Validate syntax of all puppet files
         run: bundle exec rake validate
+      - name: debug list rake tasks
+        run: bundle exec rake --tasks
       - name: Validate ruby syntax and codestyle
         run: bundle exec rake rubocop
       - name: Check puppet code style
